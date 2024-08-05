@@ -1,1 +1,1 @@
-export * from "./Category.service";
+export { default as CategoryService } from "./Category.service";

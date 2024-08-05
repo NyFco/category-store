@@ -6,7 +6,7 @@ export interface Category {
   image: string;
 }
 
-export class CategoryService extends CRUDService<Category> {
+export default class CategoryService extends CRUDService<Category> {
   constructor() {
     super("categories");
   }
