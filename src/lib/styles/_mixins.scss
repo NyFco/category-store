@@ -28,8 +28,8 @@
 }
 
 @mixin col($span: 1) {
-  flex-basis: ($span / $grid-columns) * 100%;
-  max-width: ($span / $grid-columns) * 100%;
+  flex-basis: calc($span / $grid-columns) * 100%;
+  max-width: calc($span / $grid-columns) * 100%;
 }
 //***
 
