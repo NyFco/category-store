@@ -1,7 +1,9 @@
 .container {
   @include row;
   flex-direction: column-reverse;
+  justify-content: flex-end;
   background-color: $primary;
+  min-height: 100vh;
 
   .content {
     @include container;
