@@ -1,0 +1,39 @@
+.chip {
+  @include flex(row, flex-start, center, nowrap, 5px);
+  background-color: $chipBG;
+  color: $text-secondary;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: $font-medium;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: darken($chipBG, 20%);
+    transform: scale(1.05);
+  }
+
+  &-selected {
+    background-color: $chipRemoveBG;
+
+    .chip-addon {
+      transform: rotate(45deg);
+      transition: ease all 0.5s;
+    }
+
+    &:hover {
+      background-color: darken($chipRemoveBG, 20%);
+    }
+  }
+
+  &-disabled {
+    background-color: $chipDisabledBG;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: $chipDisabledBG;
+      transform: scale(1);
+    }
+  }
+}
