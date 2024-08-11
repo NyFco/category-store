@@ -1,0 +1,49 @@
+.container {
+  @include row;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  background-color: $primary;
+  min-height: 100vh;
+
+  .content {
+    @include container;
+    @include col(12);
+    width: 100%;
+  }
+
+  .sidebar {
+    @include container;
+    @include col(12);
+    width: 100%;
+    background-color: $secondary;
+
+    .sidebarList {
+      font-size: $font-medium;
+      list-style: none;
+
+      .sidebarItem {
+        .sidebarLink {
+          color: $text;
+          text-decoration: none;
+          outline: none;
+
+          &:focus {
+            border-bottom: 2px solid $primary;
+          }
+        }
+      }
+    }
+  }
+
+  @include md {
+    flex-direction: row;
+
+    .content {
+      @include col(9);
+    }
+
+    .sidebar {
+      @include col(3);
+    }
+  }
+}

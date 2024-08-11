@@ -1,6 +1,11 @@
 import { FC } from "react";
+import { ChipsList } from "../components";
 
 const AllCategories: FC = () => {
-  return <div>AllCategories</div>;
+  return (
+    <>
+      <ChipsList />
+    </>
+  );
 };
 export default AllCategories;

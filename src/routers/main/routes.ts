@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { AllCategoriesPage } from "../../pages";
+import { AllCategoriesPage, SelectedCategoriesPage } from "../../pages";
 
 export type Route = {
   title: string;
@@ -9,10 +9,14 @@ export type Route = {
 
 const routes: Route[] = [
   {
-    // TODO: Move the statics to the locale folder
-    title: "All of the pages",
+    title: "All",
     element: AllCategoriesPage,
     to: "/",
+  },
+  {
+    title: "Selected",
+    element: SelectedCategoriesPage,
+    to: "/selected",
   },
 ];
 
