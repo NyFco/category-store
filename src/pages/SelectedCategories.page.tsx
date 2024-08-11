@@ -1,6 +1,11 @@
 import { FC } from "react";
+import { ChipsList } from "../components";
 
 const SelectedCategoriesPage: FC = () => {
-  return <div>SelectedCategoriesPage</div>;
+  return (
+    <>
+      <ChipsList selected />
+    </>
+  );
 };
 export default SelectedCategoriesPage;
