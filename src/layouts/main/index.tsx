@@ -1,10 +1,17 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import { MainRouter } from "../../routers";
 import routes from "../../routers/main/routes";
 import styles from "./MainLayout.module.scss";
+import { useCategory } from "../../hooks";
 
 const MainLayout: FC = () => {
+  const { getCategories } = useCategory();
+
+  useEffect(() => {
+    getCategories();
+  }, [getCategories]);
+
   return (
     <main className={styles.container}>
       <Router>
