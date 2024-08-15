@@ -1,7 +1,7 @@
 .chip {
   @include flex(row, flex-start, center, nowrap, 5px);
   background-color: $chipBG;
-  color: $text-secondary;
+  color: $text;
   padding: 5px 15px;
   border-radius: 8px;
   font-size: $font-medium;
