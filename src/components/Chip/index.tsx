@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, MouseEvent } from "react";
 import ChipProps from "./props";
 import styles from "./Chip.module.scss";
 import classNames from "classnames";
@@ -14,8 +14,13 @@ const Chip: FC<ChipProps> = ({
     [styles["chip-selected"]]: selected,
   });
 
+  const handleClick = (e: MouseEvent<HTMLButtonElement>): void => {
+    if (disabled) return;
+    if (onClick) onClick(e);
+  };
+
   return (
-    <button className={chipClassNames} onClick={onClick}>
+    <button className={chipClassNames} onClick={handleClick}>
       <span className={styles["chip-addon"]}>+</span>
       <span>{children}</span>
     </button>
